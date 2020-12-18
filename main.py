@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 
 list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
@@ -80,15 +81,21 @@ print(max_valor)
 # Crear arrays con pi
 print(np.pi)
 x = np.array([0, np.pi/2, np.pi])
-y = np.sin(x) # Sacamos el seno a cada elemento de x
+y = np.sin(x)  # Sacamos el seno a cada elemento de x
 print(type(y))
 print(y)
 
 # GRAFICAR FUNCIONES MATEMATICAS
 
 # Linspace = Crear arrays con linspace(inicio,fin,num = numero_de_elementos)
-ejm = np.linspace(-2,2,num=5)
+ejm = np.linspace(-2, 2, num=5)
 print(ejm)
-ejm = np.linspace(-2,2,num=9)
+ejm = np.linspace(-2, 2, num=9)
 print(ejm)
 
+# Uso de matplotlib
+x = np.linspace(0, 2*np.pi, num=100)
+y = np.sin(x)
+
+plt.plot(x, y)  # Crear la grafica
+plt.show()  # Mostrar la grafica
