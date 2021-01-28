@@ -39,6 +39,8 @@ def Plotvec2(a,b):
 list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 list3 = [1.0, 3.14, 12.5, 125.0, 12.5]
+list4 = np.array([list2])
+cuad = list4.reshape(3,3)
 
 a = np.array(list3)
 
@@ -56,6 +58,29 @@ print(a.size)
 
 # Conocer el numero de dimensiones del arreglo
 print(a.ndim)
+
+# Conocer la cantidad de elementos
+print(a.shape)
+
+# Redimensionar tupla siempre que se consideren todos los elementos
+print(a.reshape(1,5))
+print(list4.reshape(3,3))
+
+# Crear array o matriz de zeros
+print(np.zeros(4))
+print(np.zeros((3,3)))
+
+# Crear matriz identidad
+print(np.eye(5))
+
+# Sumar todos los elementos de una matriz
+print('la suma de la lista 2 es',np.sum(list4))
+
+# Sumar las filas de una matriz
+print(np.sum(cuad,axis=1))
+
+# Sumar las columnas de una matriz
+print(np.sum(cuad, axis=0))
 
 # OPERACIONES EN NUMPY
 
@@ -127,6 +152,14 @@ x = np.array([0, np.pi/2, np.pi])
 y = np.sin(x)  # Sacamos el seno a cada elemento de x
 print(type(y))
 print(y)
+
+# Linspace : Crear arrays con linspace(inicio,fin,num = numero_de_elementos)
+arr = np.linspace(1,10,num=10)
+print(arr)
+
+# Arange : np.arange(inicio, fin(no_incluido), intervalo)
+arrb = np.arange(0,10,2)
+print('arange',arrb)
 
 # GRAFICAR FUNCIONES MATEMATICAS
 
